@@ -1,25 +1,43 @@
-html, body {
-    height: 100%;
-    width: 100%;
+* {
+    box-sizing: border-box;
 }
 
 body {
     display: grid;
     grid-template-rows: 100px auto 120px;
-    grid-template-columns: auto;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 100vw;
+    grid-template-areas: "." "main" "footer";
     justify-content: center;
+    margin: 0px;
 }
 
 header {
-    width: 100%;
-    grid-area: header;
+    /* grid-area: header; */
+    height: 100px;
+    margin: 0px;
     border: 1px solid sienna;
-    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+}
+
+#logo {
+    margin: 15px;
+}
+
+a {
+    border: 1px solid red;
+    align-self: center;
+    margin-left: 35px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 main {
     width: 960px;
+    justify-self: center;
     grid-area: main;
     display: grid;
     grid-template-rows: 480px 390px 415px;
@@ -59,33 +77,32 @@ main {
     margin-top: 15px;
 }
 
-#featured-section-text{
+#featured-section-text {
     overflow: scroll;
 }
 
-h2{
+h2 {
     font-size: 28px;
 }
 
-section{
+section {
     display: grid;
-    grid-template-rows: 350px 50px; 
-    grid-template-areas: "featured-section-text"
-                         "feat-button";
+    grid-template-rows: 350px 50px;
+    grid-template-areas: "featured-section-text" "feat-button";
 }
 
-p{
+p {
     font-size: 22px;
 }
 
-button{
-    margin-top:10px;
-    width: 150px;
+button {
+    margin-top: 10px;
+    width: 170px;
     background: black;
     color: white;
     padding: 10px;
     border: none;
-    
+    font-size: 18px;
 }
 
 footer {
